@@ -23,7 +23,7 @@ pip install keras
 
 訓練集與測試集的數據型態都需轉成矩陣，並使用正規化(min-max)，讓數據都壓縮至0~1之間
 
-#訓練與測試的x&y正規化需分開設定，Ex：
+#### 訓練與測試的x&y正規化需分開設定，Ex：
 ```
 trainx = preprocessing.MinMaxScaler()
 ```
@@ -39,7 +39,9 @@ retrain_x = trainx.inverse_transform(trainx_minmax)
 ```
 #### Keras model build
 
+```
 input is 5, output is 1, dense is 1 step
+```
 
 經迭代搜尋法找尋後，神經元數128為較佳、batch_size為16較佳、使用500次迭代
 
