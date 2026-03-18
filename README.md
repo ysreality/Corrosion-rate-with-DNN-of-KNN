@@ -28,16 +28,16 @@ pip install keras
 trainx = preprocessing.MinMaxScaler()
 ```
 
-#fit_transform()為正規化(0~1之間)
+#### fit_transform()為正規化(0~1之間)
 ```
 trainx_minmax = trainx.fit_transform(npx_train).reshape(npx_train.shape[0],npx_train.shape[1])
 ```
 
-ps.若要還原到正常數值得化就使用原本的訓練集數據逆推
+#### ps.若要還原到正常數值得化就使用原本的訓練集數據逆推
 ```
 retrain_x = trainx.inverse_transform(trainx_minmax)
 ```
-#Keras model build
+#### Keras model build
 
 input is 5, output is 1, dense is 1 step
 
